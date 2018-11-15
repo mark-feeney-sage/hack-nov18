@@ -1,0 +1,23 @@
+{
+  "name": "graphqlhacks",
+  "version": "1.0.0",
+  "description": "Initial hacking with graphql",
+  "main": "hello.js",
+  "dependencies": {
+    "graphql": "^14.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sage/hackathon_2019_team_21.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sage/hackathon_2019_team_21/issues"
+  },
+  "homepage": "https://github.com/Sage/hackathon_2019_team_21#readme"
+}
