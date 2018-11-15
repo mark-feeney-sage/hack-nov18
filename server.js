@@ -6,6 +6,33 @@ var { buildSchema } = require('graphql');
 var schema = buildSchema(`
   type Query {
     hello: String
+    doc(employeeId: ID!) : PayDocument
+  }
+
+  type PayDocument {
+    id: ID!
+    employeeName: String!
+    frequency: String
+    period: String
+    payDate: String
+    grossPay: Float
+    nettPay: Float
+    nettYTD: Float
+    sections: [PaySection]
+  }
+
+  type PaySection {
+    id: ID!
+    description: String
+    total: Float
+    payItems: [PayItem]
+  }
+
+  type PayItem {
+    id: ID!
+    description: String!
+    currentAmount: Float
+    ytd: Float
   }
 `);
 
@@ -13,7 +40,7 @@ var schema = buildSchema(`
 var root = {
   hello: () => {
     return 'This is from GraphQL, yay!';
-  },
+  }
 };
 
 var app = express();
